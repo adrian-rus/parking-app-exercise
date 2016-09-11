@@ -2,7 +2,6 @@
     parking.controller("parkingCtrl", function ($scope, $filter) {
         $scope.appTitle = $filter("uppercase")(" Parking app ");
         $scope.alertTopic = "Something went wrong!";
-        $scope.alertDescription = "You must input the plate and the color of the car!";
         $scope.closeAlert = function (){
             $scope.showAlert = false;
         };
