@@ -44,6 +44,7 @@
 <!-- Binding the car object, with plate, to the scope -->
         <form name="carForm">
             <input type="text"
+                   name="plateField"
                    ng-model="car.plate"
                    placeholder="What's the plate no?"
                    ng-required="true"
@@ -59,9 +60,14 @@
             ng-disabled="carForm.$invalid">
         Park
     </button>
-        <alert ng-show="carForm.plateField.$dirty && carForm.plateField.$invalid"
+        <div alert>
+        <alert ng-show="carForm.plateField.$dirty && carForm.$invalid"
                 topic="alertTopic"
-                close="closeAlert()"></alert>
+                description = "descriptionTopic"
+                close="closeAlert()">
+
+        <alert/>
+        </div>
 </div>
 </body>
 </html>
